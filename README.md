@@ -12,5 +12,6 @@ CREATE TABLE blog(
 blogId NUMBER(20) NOT NULL,
 blogTitle VARCHAR2(70) not null,
 blogDescription CLOB,
-postedOn DATE not null
+postedOn DATE not null,
+PRIMARY KEY(blogId)
 )
