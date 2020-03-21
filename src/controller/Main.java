@@ -67,9 +67,21 @@ public class Main {
 			break;
 		case 3:
 			System.out.println("Update");
+			int id = Integer.parseInt(br.readLine());
+			String blog_title = br.readLine();
+			String blog_description = br.readLine();
+			LocalDate posted_On = LocalDate.now();
+			
+			blog.setBlogId(id);
+			blog.setBlogTitle(blog_title);
+			blog.setBlogDescription(blog_description);
+			blog.setPostedOn(posted_On);
+			blogdao.updateBlog(blog);
 			break;
 		case 4:
 			System.out.println("Delete");
+			int blogid = Integer.parseInt(br.readLine());
+			blogdao.deleteBlog(blogid);
 			break;
 			
 		
